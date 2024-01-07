@@ -3,17 +3,33 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'Inter';
-	src: url('/fonts/medium.woff2') format('woff2');
+	font-family: 'PlusJakartaSans';
+	src: url('/fonts/PlusJakartaSans-Light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'PlusJakartaSans';
+	src: url('/fonts/PlusJakartaSans-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'PlusJakartaSans';
+	src: url('/fonts/PlusJakartaSans-Medium.woff2') format('woff2');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Inter';
-	src: url('/fonts/regular.woff2') format('woff2');
-	font-weight: normal;
+	font-family: 'PlusJakartaSans';
+	src: url('/fonts/PlusJakartaSans-Bold.woff2') format('woff2');
+	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
