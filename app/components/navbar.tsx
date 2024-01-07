@@ -1,6 +1,6 @@
 import { Tabs } from './tabs';
 
-const navigations = [
+export const NAVIGATIONS = [
 	{ label: 'About', id: 'about' },
 	{ label: 'Projects', id: 'projects' },
 	{ label: 'Blog', id: 'blog' },
@@ -8,5 +8,5 @@ const navigations = [
 ];
 
 export default function Navbar() {
-	return <Tabs tabs={navigations} />;
+	return <Tabs tabs={NAVIGATIONS} />;
 }
