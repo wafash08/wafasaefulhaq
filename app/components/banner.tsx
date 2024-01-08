@@ -34,7 +34,7 @@ export default function Banner() {
 				<p className='text-center text-[#E2E8FF]/80 text-base md:text-lg mt-8 font-light tracking-wide'>
 					Let&apos;s make Your vision a digital reality, together.
 				</p>
-				<div className='flex justify-center items-center flex-wrap gap-4 md:gap-8 mt-14'>
+				<div className='flex justify-center items-center flex-wrap gap-4 md:gap-8 mt-8'>
 					<div>
 						<CTAButton />
 					</div>
