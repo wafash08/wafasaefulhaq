@@ -23,6 +23,10 @@ module.exports = {
 	// Base config
 	extends: ['eslint:recommended'],
 
+	rules: {
+		'import/no-unresolved': ['off', { caseSensitive: false }],
+	},
+
 	overrides: [
 		// React
 		{
