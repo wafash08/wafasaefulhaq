@@ -1,6 +1,6 @@
 import type { MetaFunction } from '@remix-run/node';
-import { Link } from '@remix-run/react';
 import ArrowLink from '~/components/arrow-link';
+import BackgroundGrid from '~/components/background-grid';
 import Banner from '~/components/banner';
 import BlogCard from '~/components/blog-card';
 import Container from '~/components/container';
@@ -20,17 +20,12 @@ export const meta: MetaFunction = () => {
 export default function Index() {
 	return (
 		<>
-			<img
-				src='/images/lights.png'
-				alt='light'
-				className='absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[800px] select-none object-cover pointer-events-none'
-				width={1200}
-				height={800}
-			/>
-			<section className='pt-48 mb-20'>
-				<Banner />
-			</section>
-			<section>
+			<BackgroundGrid>
+				<section className='relative pt-48 pb-40 mb-20'>
+					<Banner />
+				</section>
+			</BackgroundGrid>
+			{/* <section>
 				<Container>
 					<div className='flex items-center justify-between'>
 						<h2 className='text-[32px] text-transparent bg-clip-text bg-gradient-to-b from-[#f0eef9]/60 to-[#e2e8ff]'>
@@ -59,7 +54,7 @@ export default function Index() {
 						<ProjectCard />
 					</ul>
 				</Container>
-			</section>
+			</section> */}
 		</>
 	);
 }

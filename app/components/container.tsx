@@ -8,8 +8,6 @@ export default function Container({
 	className?: React.HTMLAttributes<HTMLDivElement>['className'];
 }) {
 	return (
-		<div className={clsx('max-w-[1200px] mx-auto px-5', className)}>
-			{children}
-		</div>
+		<div className={clsx('max-w-[1200px] mx-auto', className)}>{children}</div>
 	);
 }

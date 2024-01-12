@@ -7,6 +7,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['PlusJakartaSans', ...defaultTheme.fontFamily.sans],
+				inter: ['Inter', ...defaultTheme.fontFamily.sans],
 			},
 			animation: {
 				'slide-in': 'slide-in 500ms forwards',

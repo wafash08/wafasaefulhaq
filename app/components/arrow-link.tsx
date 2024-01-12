@@ -1,6 +1,6 @@
+import { RefCallback, useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from '@remix-run/react';
 import clsx from 'clsx';
-import { RefCallback, useCallback, useEffect, useRef, useState } from 'react';
 
 export default function ArrowLink({
 	to,
@@ -84,7 +84,14 @@ export default function ArrowLink({
 			className='text-[#E2E8FF]/80 inline-flex items-center text-left font-medium cursor-pointer transition focus:outline-none'
 			ref={setRef}
 		>
-			<span className='mr-8 text-xl font-medium'>{children}</span>
+			<span
+				className={clsx(
+					'mr-8 font-medium text-lg transition-colors',
+					pathLength === 0 && 'text-white'
+				)}
+			>
+				{children}
+			</span>
 			<div className='relative inline-flex h-14 w-14 flex-none items-center justify-center p-1'>
 				<div className='absolute text-gray-600'>
 					<svg
@@ -127,7 +134,7 @@ export default function ArrowLink({
 							? { transform: 'translateX(4px)' }
 							: { transform: 'none' }
 					}
-					className='transition-transform'
+					className='transition-transform text-white'
 				>
 					<svg
 						width={32}

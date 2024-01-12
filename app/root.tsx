@@ -10,6 +10,7 @@ import {
 } from '@remix-run/react';
 import tailwindStyleSheet from '~/tailwind.css';
 import Header from './components/header';
+import BackgroundGrid from './components/background-grid';
 
 export const links: LinksFunction = () => [
 	{ rel: 'stylesheet', href: tailwindStyleSheet },
@@ -25,7 +26,7 @@ export default function App() {
 				<Meta />
 				<Links />
 			</head>
-			<body className='bg-[#050520] text-white'>
+			<body className='font-inter antialiased px-5 lg:px-0'>
 				<Header />
 				<Outlet />
 				<ScrollRestoration />
