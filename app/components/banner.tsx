@@ -30,7 +30,7 @@ export default function Banner() {
 	return (
 		<Container>
 			<BannerTitle />
-			<p className='text-center text-slate-600 text-base md:text-lg mt-4 font-light tracking-wide'>
+			<p className='text-center text-slate-900 text-base md:text-lg mt-4 font-light tracking-wide'>
 				Let&apos;s make Your vision a digital reality, together.
 			</p>
 			<div className='flex justify-center items-center flex-wrap gap-4 md:gap-8 mt-8'>

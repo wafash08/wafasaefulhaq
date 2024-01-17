@@ -6,7 +6,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['PlusJakartaSans', ...defaultTheme.fontFamily.sans],
+				plusJakartaSans: ['PlusJakartaSans', ...defaultTheme.fontFamily.sans],
 				inter: ['Inter', ...defaultTheme.fontFamily.sans],
 			},
 			animation: {

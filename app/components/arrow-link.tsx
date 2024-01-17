@@ -81,19 +81,12 @@ export default function ArrowLink({
 	return (
 		<Link
 			to={to}
-			className='text-[#E2E8FF]/80 inline-flex items-center text-left font-medium cursor-pointer transition focus:outline-none'
+			className='text-slate-900 inline-flex items-center text-left font-medium cursor-pointer transition focus:outline-none'
 			ref={setRef}
 		>
-			<span
-				className={clsx(
-					'mr-8 font-medium text-lg transition-colors',
-					pathLength === 0 && 'text-white'
-				)}
-			>
-				{children}
-			</span>
+			<span className='mr-8 font-medium sm:text-lg'>{children}</span>
 			<div className='relative inline-flex h-14 w-14 flex-none items-center justify-center p-1'>
-				<div className='absolute text-gray-600'>
+				<div className='absolute text-slate-500'>
 					<svg
 						width='60'
 						height='60'
@@ -123,7 +116,7 @@ export default function ArrowLink({
 							strokeWidth='2'
 							fill='transparent'
 							className={clsx(
-								'text-white transition-[stroke-dashoffset] duration-300'
+								'text-slate-900 transition-[stroke-dashoffset] duration-300'
 							)}
 						/>
 					</svg>
@@ -134,7 +127,7 @@ export default function ArrowLink({
 							? { transform: 'translateX(4px)' }
 							: { transform: 'none' }
 					}
-					className='transition-transform text-white'
+					className='transition-transform text-slate-900'
 				>
 					<svg
 						width={32}

@@ -26,7 +26,7 @@ export default function App() {
 				<Meta />
 				<Links />
 			</head>
-			<body className='font-inter antialiased px-5 lg:px-0'>
+			<body className='font-inter antialiased'>
 				<Header />
 				<Outlet />
 				<ScrollRestoration />

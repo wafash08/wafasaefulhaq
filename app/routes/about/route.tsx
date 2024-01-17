@@ -1,4 +1,4 @@
-import BackgroundGrid from '~/components/background-grid';
+import { type MetaFunction } from '@remix-run/node';
 import Container from '~/components/container';
 import {
 	ExpressIcon,
@@ -11,6 +11,18 @@ import {
 	TailwindIcon,
 	TypeScriptIcon,
 } from '~/components/icons';
+import BackgroundGrid from '~/components/background-grid';
+
+export const meta: MetaFunction = () => {
+	return [
+		{ title: 'About | Wafa Saefulhaq' },
+		{
+			name: 'description',
+			content:
+				'An online portfolio and blog by Wafa Saefulhaq, showcase of my projects, and some of my thoughts about website development.',
+		},
+	];
+};
 
 const TECH_STACKS = [
 	{ id: 'javascript', name: 'JavaScript', icon: <JavaScriptIcon /> },

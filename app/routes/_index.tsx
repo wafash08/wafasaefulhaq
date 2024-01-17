@@ -1,10 +1,8 @@
-import type { MetaFunction } from '@remix-run/node';
-import ArrowLink from '~/components/arrow-link';
+import { type MetaFunction } from '@remix-run/node';
 import BackgroundGrid from '~/components/background-grid';
 import Banner from '~/components/banner';
 import BlogCard from '~/components/blog-card';
 import Container from '~/components/container';
-import ProjectCard from '~/components/project-card';
 
 export const meta: MetaFunction = () => {
 	return [
@@ -19,42 +17,38 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
 	return (
-		<>
+		<main>
 			<BackgroundGrid>
-				<section className='relative pt-48 pb-40 mb-20'>
+				<section className='relative py-48'>
 					<Banner />
 				</section>
 			</BackgroundGrid>
-			{/* <section>
+			<section className='mb-40'>
 				<Container>
-					<div className='flex items-center justify-between'>
-						<h2 className='text-[32px] text-transparent bg-clip-text bg-gradient-to-b from-[#f0eef9]/60 to-[#e2e8ff]'>
+					<header className='py-16 sm:text-center'>
+						<h2 className='text-3xl sm:text-4xl text-slate-900 font-plusJakartaSans font-bold mb-4'>
 							Blog
 						</h2>
-						<ArrowLink to='/blog'>See more blog</ArrowLink>
+						<p className='text-lg text-slate-700'>
+							Thoughts, mental models, and tutorials about web development.
+						</p>
+					</header>
+					<div className='relative sm:pb-12 sm:ml-8 md:ml-14 lg:ml-64'>
+						<div className='hidden sm:block absolute bg-slate-200 top-5 bottom-0 right-full w-px mr-7 md:mr-12'></div>
+						<ul className='space-y-16'>
+							<li>
+								<BlogCard />
+							</li>
+							<li>
+								<BlogCard />
+							</li>
+							<li>
+								<BlogCard />
+							</li>
+						</ul>
 					</div>
-					<ul className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-						<BlogCard />
-						<BlogCard />
-						<BlogCard />
-					</ul>
 				</Container>
 			</section>
-			<section className='mt-20 mb-20'>
-				<Container>
-					<div className='flex items-center justify-between'>
-						<h2 className='text-[32px] text-transparent bg-clip-text bg-gradient-to-b from-[#f0eef9]/60 to-[#e2e8ff]'>
-							Projects
-						</h2>
-						<ArrowLink to='/projects'>See more projects</ArrowLink>
-					</div>
-					<ul className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-						<ProjectCard />
-						<ProjectCard />
-						<ProjectCard />
-					</ul>
-				</Container>
-			</section> */}
-		</>
+		</main>
 	);
 }
