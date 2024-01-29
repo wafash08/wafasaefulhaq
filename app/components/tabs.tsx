@@ -74,7 +74,7 @@ export function Tabs({ tabs }: TabsProps) {
 			onPointerLeave={onLeaveTabs}
 		>
 			<div
-				className='absolute top-[3px] left-0 bg-slate-100 border border-slate-200 rounded-full duration-300'
+				className='absolute top-[3px] left-0 bg-slate-50/10 border border-slate-200 rounded-full duration-300'
 				style={hoverStyles}
 			/>
 			<ul className='flex items-center rounded-full p-[2px] border border-slate-200 relative'>
@@ -84,7 +84,7 @@ export function Tabs({ tabs }: TabsProps) {
 							<Link
 								to={item.id}
 								className={clsx(
-									'font-inter py-2 px-5 flex items-center justify-center rounded-full text-slate-600 transition-colors hover:text-slate-900 select-none'
+									'font-inter py-2 px-5 flex items-center justify-center rounded-full text-slate-400 transition-colors hover:text-slate-900 select-none'
 								)}
 								ref={el => (anchorRefs[i] = el)}
 								onPointerEnter={e => onEnterTab(e, i)}
