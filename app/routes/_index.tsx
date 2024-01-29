@@ -3,6 +3,7 @@ import BackgroundGrid from '~/components/background-grid';
 import Banner from '~/components/banner';
 import BlogCard from '~/components/blog-card';
 import Container from '~/components/container';
+import ProjectCard, { type Project } from '~/components/project-card';
 
 export const meta: MetaFunction = () => {
 	return [
@@ -15,6 +16,43 @@ export const meta: MetaFunction = () => {
 	];
 };
 
+const PROJECTS: Project[] = [
+	{
+		description:
+			'A clean and simple interface to organize your favourite websites.',
+		image: {
+			alt: 'Bookmark landing page preview',
+			src: '/images/bookmark-landing-page.jpg',
+		},
+		title: 'Bookmark landing page',
+		credit: {
+			link: 'https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158',
+			to: 'frontendmentor.io',
+		},
+		gradient: {
+			from: '#FA5757',
+			to: '#5368DF',
+		},
+	},
+	{
+		description:
+			'Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.',
+		image: {
+			alt: 'Manage landing page preview',
+			src: '/images/manage-landing-page.jpg',
+		},
+		title: 'Manage landing page',
+		credit: {
+			link: 'https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5',
+			to: 'frontendmentor.io',
+		},
+		gradient: {
+			from: '#242D52',
+			to: '#F25F3A',
+		},
+	},
+];
+
 export default function Index() {
 	return (
 		<main>
@@ -23,10 +61,10 @@ export default function Index() {
 					<Banner />
 				</section>
 			</BackgroundGrid>
-			<section className='mb-40'>
+			<section className='mb-24'>
 				<Container>
 					<header className='py-16 sm:text-center'>
-						<h2 className='text-3xl sm:text-4xl text-slate-900 font-plusJakartaSans font-bold mb-4'>
+						<h2 className='text-3xl sm:text-5xl text-slate-900 font-bold mb-4'>
 							Blog
 						</h2>
 						<p className='text-lg text-slate-700'>
@@ -49,6 +87,38 @@ export default function Index() {
 					</div>
 				</Container>
 			</section>
+
+			<BackgroundGrid direction='top'>
+				<section id='projects' className='pb-16'>
+					<Container className='relative'>
+						<header className='py-16 sm:text-center'>
+							<h2 className='text-3xl sm:text-5xl text-slate-900 font-bold mb-4'>
+								Projects
+							</h2>
+							<p className='text-lg text-slate-700'>
+								Showcase of my works on web development.
+							</p>
+						</header>
+						<ul className='space-y-16'>
+							{PROJECTS.map((project, idx) => {
+								const { description, image, title, credit, gradient } = project;
+								return (
+									<ProjectCard
+										key={title}
+										description={description}
+										image={image}
+										title={title}
+										credit={credit}
+										// reverse if the index is even
+										reverse={(idx + 1) % 2 === 0}
+										gradient={gradient}
+									/>
+								);
+							})}
+						</ul>
+					</Container>
+				</section>
+			</BackgroundGrid>
 		</main>
 	);
 }

@@ -84,7 +84,7 @@ export default function ArrowLink({
 			className='text-slate-900 inline-flex items-center text-left font-medium cursor-pointer transition focus:outline-none'
 			ref={setRef}
 		>
-			<span className='mr-8 font-medium sm:text-lg'>{children}</span>
+			<span className='mr-8 font-medium font-plusJakartaSans'>{children}</span>
 			<div className='relative inline-flex h-14 w-14 flex-none items-center justify-center p-1'>
 				<div className='absolute text-slate-500'>
 					<svg

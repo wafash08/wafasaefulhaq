@@ -10,7 +10,7 @@ import {
 } from '@remix-run/react';
 import tailwindStyleSheet from '~/tailwind.css';
 import Header from './components/header';
-import BackgroundGrid from './components/background-grid';
+import Footer from './components/footer';
 
 export const links: LinksFunction = () => [
 	{ rel: 'stylesheet', href: tailwindStyleSheet },
@@ -29,6 +29,7 @@ export default function App() {
 			<body className='font-inter antialiased'>
 				<Header />
 				<Outlet />
+				<Footer />
 				<ScrollRestoration />
 				<Scripts />
 				<LiveReload />

@@ -39,14 +39,14 @@ const TECH_STACKS = [
 export default function AboutPage() {
 	return (
 		<BackgroundGrid>
-			<section className='relative pt-48 text-black'>
+			<section className='relative pt-48 text-slate-900'>
 				<Container>
 					<div className='flex gap-6 mb-8'>
 						<div className='relative flex-1'>
 							<div className='absolute w-20 h-full top-14 right-0 border-t border-l border-b border-[#E2E8FF]/10 rounded-tl-2xl rounded-bl-2xl' />
 						</div>
 						<div className='basis-[600px] border border-[#E2E8FF]/10 rounded-2xl p-8'>
-							<p className='text-[#E2E8FF]/50 mb-2'>How i got where i am now</p>
+							<p className='text-slate-400 mb-2'>How i got where i am now</p>
 							<h2 className='font-sans text-4xl mb-8 text-justify'>
 								<p>Bridging Worlds -</p>
 								<p>from Arabic Literature</p>
@@ -115,7 +115,9 @@ export default function AboutPage() {
 							<div />
 						</div>
 						<div className='basis-[600px] border border-[#E2E8FF]/10 rounded-2xl p-8'>
-							<h2 className='font-sans text-4xl mb-8'>Contact</h2>
+							<h2 className='font-sans text-4xl mb-8' id='contact'>
+								Contact
+							</h2>
 							<div>
 								<ul className='flex items-center gap-5'>
 									<li>

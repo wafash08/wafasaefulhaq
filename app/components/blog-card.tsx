@@ -5,7 +5,7 @@ import ArrowLink from './arrow-link';
 export default function BlogCard() {
 	return (
 		<article className='relative group'>
-			<div className='absolute -inset-y-4 -inset-x-4 md:-inset-x-6 rounded-2xl group-hover:bg-slate-100 -z-10'></div>
+			<div className='absolute -inset-y-4 -inset-x-4 md:-inset-x-6 rounded-2xl transition-colors duration-200 group-hover:bg-slate-100 -z-10'></div>
 			<svg
 				viewBox='0 0 9 9'
 				className='hidden sm:block absolute w-[9px] h-[9px] right-full top-3 text-slate-400 mr-[calc(1.75rem-4px)] md:mr-[calc(3rem-4px)] overflow-visible'
@@ -45,7 +45,7 @@ export default function BlogCard() {
 					</dd>
 				</dl>
 			</div>
-			<div className='mt-10'>
+			<div className='mt-8'>
 				<ArrowLink to='/blog/blog-judul'>Read more</ArrowLink>
 			</div>
 		</article>

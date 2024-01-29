@@ -50,6 +50,10 @@
 	font-display: swap;
 }
 
-/* * {
+:root {
+	@apply scroll-smooth;
+}
+
+/* #projects * {
 	@apply border border-red-600;
 } */
